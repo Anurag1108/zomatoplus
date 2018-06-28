@@ -45,6 +45,7 @@ app.controller("restaurantCtrl", function($scope, $http) {
 			console.log(data);
 			$scope.fetchRestaurant();
 			$scope.restaurants = data;
+			$route.reload();
 		}).error(function(data, status) {
 			$scope.status = status;
 			$scope.data = "Request failed";
